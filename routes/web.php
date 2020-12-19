@@ -23,3 +23,5 @@ Route::post('/inscription', [InscriptionController::class, 'traitement']);
 
 Route::get('/connexion', [ConnexionController::class,'formulaire']);
 Route::post('/connexion', [ConnexionController::class,'traitement']);
+
+Route::view('/meg', 'meg');
