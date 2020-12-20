@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Utilisateur;
+use App\Models\Utilisateurs;
 
 class InscriptionController extends Controller
 {
@@ -21,7 +21,7 @@ class InscriptionController extends Controller
         ]);
 
         
-    $utilisateur = App\Models\Utilisateur::create([
+    $utilisateur = Utilisateurs::create([
         'email' => request('email'),
         'mot_de_passe' => bcrypt(request('password')),
     ]);

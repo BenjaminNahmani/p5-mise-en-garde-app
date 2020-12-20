@@ -26,6 +26,10 @@
                     <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="/">Accueil</a>
                 </ul>
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="/meg">Mise en garde</a>
+                </ul>
                 </div>
             </div>
         </nav>

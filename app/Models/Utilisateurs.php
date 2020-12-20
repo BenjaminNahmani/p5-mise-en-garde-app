@@ -5,8 +5,7 @@ namespace App\Models;
 Use Illuminate\Database\Eloquent\Model;
 
 
-class Utilisateur extends Model
+class Utilisateurs extends Model
 {
     protected $fillable = ['email', 'mot_de_passe'];
-
 }
