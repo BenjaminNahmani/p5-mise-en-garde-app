@@ -1,9 +1,11 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\InscriptionController;
+
 use App\Http\Controllers\ConnexionController;
+use App\Http\Controllers\InscriptionController;
 use App\Http\Controllers\UtilisateursController;
+use App\Http\Controllers\StudentController;
 
 
 /*
@@ -27,4 +29,4 @@ Route::post('/connexion', [ConnexionController::class,'traitement']);
 
 Route::get('/meg',[UtilisateursController::class,'liste']);
 
-/* Route::view('/meg', 'meg')->name('meg-form'); */
+Route::get('/liste',[StudentController::class,'liste']);

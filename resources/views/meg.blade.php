@@ -14,33 +14,20 @@
         <th scope="col">Nom</th>
         <th scope="col">Prénom</th>
         <th scope="col">Classe</th>
+        <th scope="col">Action</th>
       </tr>
     </thead>
     <tbody>
-      
-      @foreach ($utilisateurs as $utilisateur)
-        <tr>{{$utilisateur->email}}<tr>
-      @endforeach
 
 </section>
-
+      <tr>
         <th scope="row">1</th>
-        <td>Mark</td>
-        <td>Otto</td>
-        <td>@mdo</td>
-      </tr>
-      <tr>
-        <th scope="row">2</th>
-        <td>Jacob</td>
-        <td>Thornton</td>
-        <td>@fat</td>
-      </tr>
-      <tr>
-        <th scope="row">3</th>
-        <td>Larry</td>
-        <td>the Bird</td>
-        <td>@twitter</td>
+        <td>Cohen</td>
+        <td>Chmouel</td>
+        <td>CE2</td>
+        <td><button class="action">Voir le profil</button></td>
       </tr>
     </tbody>
   </table>
+
 @endsection
