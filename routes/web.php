@@ -27,6 +27,7 @@ Route::post('/inscription', [InscriptionController::class, 'traitement']);
 
 Route::post('/connexion', [ConnexionController::class,'traitement']);
 
-Route::get('/meg',[UtilisateursController::class,'liste']);
+Route::get('/admin',[UtilisateursController::class,'liste']);
 
-Route::get('/liste',[StudentController::class,'liste']);
+Route::get('/add_student', [StudentController::class, 'formulaire']);
+Route::post('/add_student', [StudentController::class, 'traitement']);

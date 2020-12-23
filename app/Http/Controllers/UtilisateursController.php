@@ -8,7 +8,7 @@ class UtilisateursController extends Controller{
     public function liste(){
         $utilisateurs = Utilisateurs::All();
 
-        return view('meg', [
+        return view('admin', [
             'utilisateurs' => $utilisateurs,
         ]);
 

@@ -21,7 +21,7 @@ class ConnexionController extends Controller
         
         
         if ($resultat) {
-            return redirect('/meg');
+            return redirect('/admin');
         };
 
         return back()->withInput()->withErrors([

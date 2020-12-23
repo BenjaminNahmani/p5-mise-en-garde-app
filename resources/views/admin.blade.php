@@ -1,10 +1,5 @@
-@extends('layout')
-@section('content')
-
-<section class="second_nav">
-
-
-</section>
+@extends('layout_admin')
+@section('admin_content')
 
 <section class="student_table">
   <table class="table table-striped">
