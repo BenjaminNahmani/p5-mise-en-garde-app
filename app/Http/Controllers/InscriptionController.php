@@ -20,11 +20,24 @@ class InscriptionController extends Controller
             'password.min' => 'Pour des raisons de sécurité, votre mot de passe doit contenir :min caractères.'
         ]);
 
+        $utilisateur = Utilisateurs::create([
+            'email' => request('email'),
+            'password' => bcrypt(request('password')),
+        ]);
+
+        $resultat = auth()->attempt([
+            'email'=> request('email'),
+            'password'=> request('password'),
+            'password_confirmation'=>request('password_confirmation')
+        ]);
         
-    $utilisateur = Utilisateurs::create([
-        'email' => request('email'),
-        'mot_de_passe' => bcrypt(request('password')),
-    ]);
+        if ($resultat) {
+            return back()->withInput()->withErrors([
+                'email'=>'Vos identifiants sont incorrect.',
+                'password'=>'Votre mot de passe n\'est pas accépté.',
+                'password_confirmation'=>'Vos mot de passe doivent être identique.',
+            ]);
+        };
 
     }
 }

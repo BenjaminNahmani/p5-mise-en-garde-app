@@ -1,8 +1,9 @@
 @extends('layout')
 
 @section('content')
+
 <section class="connexion">
-    <form class="section" action="/meg" method="POST">
+    <form class="section" action="/connexion" method="post" >
         {{ csrf_field() }}
     
         <div class="mb-3">

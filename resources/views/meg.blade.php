@@ -1,6 +1,13 @@
 @extends('layout')
 @section('content')
-<table class="table table-striped">
+
+<section class="second_nav">
+
+
+</section>
+
+<section class="student_table">
+  <table class="table table-striped">
     <thead>
       <tr>
         <th scope="col">#</th>
@@ -10,7 +17,13 @@
       </tr>
     </thead>
     <tbody>
-      <tr>
+      
+      @foreach ($utilisateurs as $utilisateur)
+        <tr>{{$utilisateur->email}}<tr>
+      @endforeach
+
+</section>
+
         <th scope="row">1</th>
         <td>Mark</td>
         <td>Otto</td>

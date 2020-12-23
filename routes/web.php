@@ -1,8 +1,10 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\ConnexionController;
 use App\Http\Controllers\InscriptionController;
+use App\Http\Controllers\ConnexionController;
+use App\Http\Controllers\UtilisateursController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -21,7 +23,8 @@ Route::view('/', 'index');
 Route::get('/inscription', [InscriptionController::class, 'formulaire']);
 Route::post('/inscription', [InscriptionController::class, 'traitement']);
 
-Route::get('/connexion', [ConnexionController::class,'formulaire']);
 Route::post('/connexion', [ConnexionController::class,'traitement']);
 
-Route::view('/meg', 'meg');
+Route::get('/meg',[UtilisateursController::class,'liste']);
+
+/* Route::view('/meg', 'meg')->name('meg-form'); */
