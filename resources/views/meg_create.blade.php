@@ -21,16 +21,18 @@
 
 
 
-        <form>
+        <form class="section" action="/meg_create" method="POST">
+            {{ csrf_field() }}
+
             <div class="row">
               <div class="col-3 meg_create_input">
                 <label for="">Nom</label>
-                <input type="text" class="form-control" placeholder="Nom de l'élève">
+                <input type="text" class="form-control" placeholder="Nom de l'élève" name="lastname">
               </div>
 
               <div class="col-3 meg_create_input">
                 <label for="">Prénom</label>
-                <input type="text" class="form-control" placeholder="Prénom de l'élève">
+                <input type="text" class="form-control" placeholder="Prénom de l'élève" name="firstname">
               </div>
 
 
@@ -38,13 +40,13 @@
                 <div class="row">
                     <div class="col-3 meg_create_input">
                         <label for="">Nom du professeur</label>
-                        <input type="text" class="form-control" placeholder="Nom du professeur">
+                        <input type="text" class="form-control" placeholder="Nom du professeur" name="teacher">
                     </div>
                 </div>
 
                 <div class="col-3">
                     <label for="">Classe</label>
-                    <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+                    <select class="custom-select mr-sm-2" id="inlineFormCustomSelect" name="classe">
                         <option selected>Choisir</option>
                         <option value="1">CP</option>
                         <option value="2">CE1</option>
@@ -60,7 +62,7 @@
             <div class="row">
                 <div class="form-group meg_create_input">
                     <label for="exampleFormControlTextarea1">Incident avec l'élève</label>
-                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="incident"></textarea>
                   </div>
             </div>
             

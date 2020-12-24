@@ -52,7 +52,7 @@
                       <a class="nav-link" href="/add_student">Ajouter un élève</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="/meg">Créer une mise en garde</a>
+                      <a class="nav-link" href="/meg_create">Créer une mise en garde</a>
                     </li>
                 
                   </ul>
