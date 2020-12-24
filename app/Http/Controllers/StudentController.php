@@ -24,14 +24,14 @@ class StudentController extends Controller
             'lastname' => request('lastname'),
             'firstname' => request('firstname'),
             'classe'=> request('classe'),
-            'megnumber'=>['required'],    
+            'megnumber'=>request('megnumber'),    
 
         ]);
         
         if ($students) {
             return back()->withInput()->withErrors([
                 'lastname'=>"Veuillez renseigner le nom de l'élève.",
-                'password'=>"Veuillez renseigner le prénom de l'élève",
+                'firstname'=>"Veuillez renseigner le prénom de l'élève",
                 'classe'=>"Veuillez renseigner la classe de l'élève",
             ]);
         };
@@ -41,9 +41,14 @@ class StudentController extends Controller
     public function liste(){
         $students= Student::All();
         
-        return view('liste', [
+        return view('admin', [
             'students' => $students,
         ]);
+    }
+
+    public function deleteStudent(){
+        $students= Student::find();
+        $students->delete();
     }
 }
 
