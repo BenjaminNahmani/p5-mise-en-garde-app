@@ -47,7 +47,7 @@ class StudentController extends Controller
     }
 
     public function deleteStudent(){
-        $students= Student::find();
+        $students= Student::find($id);
         $students->delete();
     }
 }

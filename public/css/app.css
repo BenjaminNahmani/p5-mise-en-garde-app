@@ -1,3 +1,50 @@
 #logo {
     border-radius: 10%;
 }
+body{
+    font-size: large;
+}
+.content{
+    margin: auto;
+    padding-top: 40px;
+    width: 50%;
+}
+
+/* ------------------------------------------------------ */
+/*==                  Administration                     */
+/* -----------------------------------------------------*/
+
+.add_student_form_container{
+    margin-top: 20px;
+}
+
+.second_nav{
+    padding-left: 10px;
+}
+
+/* ------------------------------------------------------ */
+/*==                   Mise en garde                     */
+/* -----------------------------------------------------*/
+
+.school_header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.separate{
+    background-color: grey;
+    height: 2px;
+    width: 50%;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.meg_create_input{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+}
