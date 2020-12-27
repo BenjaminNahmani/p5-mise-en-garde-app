@@ -29,8 +29,12 @@
                 </ul>
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="/admin">Mise en garde</a>
+                    <a class="nav-link active" aria-current="page" href="/admin">Administration</a>
                 </ul>
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="/deconnexion">Déconnexion</a>
+              </ul>
                 </div>
             </div>
         </nav>

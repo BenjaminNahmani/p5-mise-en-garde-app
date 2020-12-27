@@ -2,11 +2,12 @@
 
 use Illuminate\Support\Facades\Route;
 
-use App\Http\Controllers\InscriptionController;
-use App\Http\Controllers\ConnexionController;
-use App\Http\Controllers\UtilisateursController;
-use App\Http\Controllers\StudentController;
 use App\Http\Controllers\MegController;
+use App\Http\Controllers\CompteController;
+use App\Http\Controllers\StudentController;
+use App\Http\Controllers\ConnexionController;
+use App\Http\Controllers\InscriptionController;
+use App\Http\Controllers\UtilisateursController;
 
 
 /*
@@ -29,7 +30,9 @@ Route::post('/inscription', [InscriptionController::class, 'traitement']);
 Route::get('/connexion', [ConnexionController::class,'formulaire']);
 Route::post('/connexion', [ConnexionController::class,'traitement']);
 
-Route::get('/admin', [ConnexionController::class,'ifConnected']);
+Route::get('/admin', [CompteController::class,'ifNotConnected']);
+Route::get('/add_student', [CompteController::class, 'ifNotConnected']);
+Route::get('/meg_create', [CompteController::class, 'ifNotConnected']);
 
 Route::get('/admin',[StudentController::class,'liste']);
 Route::get('/add_student', [StudentController::class, 'formulaire']);
@@ -38,3 +41,5 @@ Route::post('/add_student', [StudentController::class, 'traitement']);
 
 Route::get('/meg_create', [MegController::class, 'formulaire']);
 Route::post('/meg_create', [MegController::class, 'traitement']);
+
+Route::get('/deconnexion',[CompteController::class, 'deconnexion']);

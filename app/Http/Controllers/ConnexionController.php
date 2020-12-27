@@ -33,9 +33,4 @@ class ConnexionController extends Controller
         ]);
     }
 
-    public function ifConnected(){
-        if (auth()->guest()){
-            return redirect('index');
-        }
-    }
 }
