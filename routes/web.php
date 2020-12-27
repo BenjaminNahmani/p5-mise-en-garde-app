@@ -20,17 +20,21 @@ use App\Http\Controllers\MegController;
 |
 */
 
-
 Route::view('/', 'index');
 
 Route::get('/inscription', [InscriptionController::class, 'formulaire']);
 Route::post('/inscription', [InscriptionController::class, 'traitement']);
 
+
+Route::get('/connexion', [ConnexionController::class,'formulaire']);
 Route::post('/connexion', [ConnexionController::class,'traitement']);
 
+Route::get('/admin', [ConnexionController::class,'ifConnected']);
+
+Route::get('/admin',[StudentController::class,'liste']);
 Route::get('/add_student', [StudentController::class, 'formulaire']);
 Route::post('/add_student', [StudentController::class, 'traitement']);
-Route::get('/admin',[StudentController::class,'liste']);
+
 
 Route::get('/meg_create', [MegController::class, 'formulaire']);
 Route::post('/meg_create', [MegController::class, 'traitement']);

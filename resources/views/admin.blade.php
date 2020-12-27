@@ -28,7 +28,7 @@
                 <button class="btn btn-primary btn-sm rounded-0" type="button" data-toggle="tooltip" data-placement="top" title="Créer une mise en garde"><i class="fa fa-table"></i></button>
             </li>
             <li class="list-inline-item">
-                <button class="btn btn-danger btn-sm rounded-0" type="button" data-toggle="tooltip" data-placement="top" title="Supprimer l'élève du tableau" ><i class="fa fa-trash"></i></button>
+              <button class="btn btn-danger btn-sm rounded-0" type="button" data-toggle="tooltip" data-placement="top" title="Supprimer l'élève du tableau" ><i class="fa fa-trash"></i></button>
             </li>
 
         </ul>

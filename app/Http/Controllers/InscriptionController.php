@@ -32,12 +32,13 @@ class InscriptionController extends Controller
         ]);
         
         if ($resultat) {
-            return back()->withInput()->withErrors([
-                'email'=>'Vos identifiants sont incorrect.',
-                'password'=>'Votre mot de passe n\'est pas accépté.',
-                'password_confirmation'=>'Vos mot de passe doivent être identique.',
-            ]);
+            return redirect('/');
         };
+        return back()->withInput()->withErrors([
+            'email'=>'Vos identifiants sont incorrect.',
+            'password'=>'Votre mot de passe n\'est pas accépté.',
+            'password_confirmation'=>'Vos mot de passe doivent être identique.',
+        ]);
 
     }
 }

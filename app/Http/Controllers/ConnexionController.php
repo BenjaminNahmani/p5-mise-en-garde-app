@@ -7,6 +7,10 @@ use Illuminate\Http\Request;
 class ConnexionController extends Controller
 {
 
+    public function formulaire(){
+        return view('inscription');
+    }
+
 
     public function traitement(){
         request()->validate([
@@ -27,5 +31,11 @@ class ConnexionController extends Controller
         return back()->withInput()->withErrors([
             'email'=>'Vos identifiants sont incorrect.',
         ]);
+    }
+
+    public function ifConnected(){
+        if (auth()->guest()){
+            return redirect('index');
+        }
     }
 }

@@ -29,12 +29,14 @@ class StudentController extends Controller
         ]);
         
         if ($students) {
-            return back()->withInput()->withErrors([
-                'lastname'=>"Veuillez renseigner le nom de l'élève.",
-                'firstname'=>"Veuillez renseigner le prénom de l'élève",
-                'classe'=>"Veuillez renseigner la classe de l'élève",
-            ]);
-        };
+            return redirect('admin');
+        }; 
+
+        return back()->withInput()->withErrors([
+            'lastname'=>"Veuillez renseigner le nom de l'élève.",
+            'firstname'=>"Veuillez renseigner le prénom de l'élève",
+            'classe'=>"Veuillez renseigner la classe de l'élève",
+        ]);
 
     }
 
@@ -47,8 +49,7 @@ class StudentController extends Controller
     }
 
     public function deleteStudent(){
-        $students= Student::find($id);
-        $students->delete();
+        $deleteStudent=Student::where('id',$id)->delete();
     }
 }
 

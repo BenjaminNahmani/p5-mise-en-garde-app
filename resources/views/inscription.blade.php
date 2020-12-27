@@ -1,5 +1,12 @@
 @extends('index')
 @section('content')
+
+<div class="school_form">
+    <figure class="school_index">
+      <img src="{{URL::asset('/img/ecole.png')}}" id="form_img" alt="Logo de l'école" >
+    </figure>
+  </div>
+
     <form class="section" action="/inscription" method="POST">
         {{ csrf_field() }}
      
@@ -33,6 +40,7 @@
             @endif
         </div>
 
+        <p> <a href="/">Retourner à la page de connexion</a> </p>
         <button type="submit" class="btn btn-primary">Demander mes identifiants</button>
 
     </form>
