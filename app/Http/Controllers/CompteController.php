@@ -8,7 +8,8 @@ class CompteController extends Controller
 {
     public function ifNotConnected(){
 
-        if (auth()->guest()){
+/*         dd(auth()); */
+        if (!Auth::check()){
             return redirect('/')->withErrors([
                 "email" =>'Vous devez être connecté pour avoir accès a cette page.'
             ]);
@@ -17,8 +18,4 @@ class CompteController extends Controller
         return redirect('admin');
     }
 
-    public function deconnexion(){
-        auth()->logout();
-        return redirect('/');
-    }
 }

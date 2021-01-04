@@ -21,7 +21,7 @@
 
 
 
-        <form class="section" action="/meg_create" method="POST">
+        <form class="section" action="/meg_create" method="POST" id="form-js">
             {{ csrf_field() }}
 
             <div class="row">

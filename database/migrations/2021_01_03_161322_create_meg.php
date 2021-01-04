@@ -15,11 +15,13 @@ class CreateMeg extends Migration
     {
         Schema::create('meg', function (Blueprint $table) {
             $table->id();
-            $table->string('lastname');
-            $table->string('firstname');
-            $table->string('classe');
-            $table->string('teacher');
             $table->longText('incident');
+            $table->integer('student');
+            $table->foreign('student')
+                    ->references('id')
+                    ->on('student')
+                    ->onDelete('restrict')
+                    ->onUpdate('restrict');
             $table->timestamps();
         });
     }

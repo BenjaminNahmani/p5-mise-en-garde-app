@@ -2,7 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Meg;
+use App\Models\Student;
 use Illuminate\Http\Request;
+
 
 class MegController extends Controller
 {
@@ -12,21 +15,19 @@ class MegController extends Controller
 
     public function traitement(){
         request()->validate([
-            'lastname' => ['required'],
-            'firstname' => ['required'],
-            'classe' => ['required'],
-            'teacher' => ['required'],
             'incident'=>['required'],
+            'student'=>['required'],
             ]);
             
-        $resultat = auth()->attempt([
-            'lastname'=> request('lastname'),
-            'firstname'=> request('firstname'),
-            'classe'=> request('classe'),
-            'teacher'=> request('teacher'),
+        $resultat = Meg::create([
             'incident'=> request('incident'),
+            'student'=>request('student'),
         ]);
-        
+
+        $student = Student::find(request('student'));
+
+        $student->megnumber=$student->megnumber+1;
+        $student->save();
         
         if ($resultat) {
             return redirect('/admin');

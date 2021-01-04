@@ -9,5 +9,5 @@ class Meg extends Model
 {
     use HasFactory;
     protected $table = 'meg';
-    protected $fillable = ['lastname', 'firstname', 'classe', 'teacher', 'incident'];
+    protected $fillable = ['lastname', 'firstname', 'classe', 'teacher', 'incident', 'student'];
 }

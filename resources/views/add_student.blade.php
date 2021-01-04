@@ -2,8 +2,8 @@
 
 @section('admin_content')
 <div class="container add_student_form_container">
-      <form class="section" action="/add_student" method="POST" >
-          {{ csrf_field() }}
+      <form class="section" action="/add_student" method="POST" id="form-js" >
+        {{ csrf_field() }}
 
           <div class="mb-3">
             <label for="lastname" class="form-label">Nom de famille</label>

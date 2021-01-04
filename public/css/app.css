@@ -43,29 +43,19 @@ body{
     padding-left: 10px;
 }
 
+#loading{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 /* ------------------------------------------------------ */
 /*==                   Mise en garde                     */
 /* -----------------------------------------------------*/
 
-.school_header{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.separate{
-    background-color: grey;
-    height: 2px;
-    width: 50%;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-}
-
 .meg_create_input{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
-    margin: 10px;
 }

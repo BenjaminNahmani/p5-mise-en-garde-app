@@ -9,34 +9,30 @@
           <th scope="col">Nom</th>
           <th scope="col">Prénom</th>
           <th scope="col">Classe</th>
+          <th scope="col">Nb M.E.G</th>
           <th scope="col">Action</th>
         </tr>
       </thead>
-      <tbody>
 
-  </section>
-  @foreach ($students as $student)
-    <tr>
-      <th scope="row">{{$student->id}}</th>
-      <td>{{$student->lastname}}</td>
-      <td>{{$student->firstname}}</td>
-      <td>{{$student->classe}}</td>
-      <td>
-        <!-- Call to action buttons -->
-        <ul class="list-inline m-0">
-            <li class="list-inline-item">
-                <button class="btn btn-primary btn-sm rounded-0" type="button" data-toggle="tooltip" data-placement="top" title="Créer une mise en garde"><i class="fa fa-table"></i></button>
-            </li>
-            <li class="list-inline-item">
-              <button class="btn btn-danger btn-sm rounded-0" type="button" data-toggle="tooltip" data-placement="top" title="Supprimer l'élève du tableau" ><i class="fa fa-trash"></i></button>
-            </li>
 
-        </ul>
-    </td>
-    </tr>
-  @endforeach
+
+      <tbody id="students" >
+
+
+
+
 
     </tbody>
   </table>
+    <div id="loading">
+      <figure>
+        <img src="{{URL::asset('/img/loading.gif') }}" alt="Chargement...">
+      </figure>
+    </div>
+</section>
+
+  
 
 @endsection
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="{{URL::asset('/js/admin.js')}}"></script>

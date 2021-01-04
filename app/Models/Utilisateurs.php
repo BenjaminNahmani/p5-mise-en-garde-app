@@ -11,4 +11,5 @@ class Utilisateurs extends Authenticatable
 {
     use HasFactory, Notifiable;
     protected $fillable = ['email', 'password'];
+
 }

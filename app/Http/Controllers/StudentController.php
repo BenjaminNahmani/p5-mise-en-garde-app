@@ -2,8 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use App\Models\Meg;
 use App\Models\Student;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+
 
 class StudentController extends Controller
 {
@@ -41,15 +44,36 @@ class StudentController extends Controller
     }
 
     public function liste(){
-        $students= Student::All();
+
         
-        return view('admin', [
+        return view('admin', []);
+    }
+
+    public function dataListe(){
+
+        $students= Student::All();
+
+        
+        return view('student', [
             'students' => $students,
         ]);
     }
+    
+    public function meg(){
+        $students->meg;
 
-    public function deleteStudent(){
+        return view('admin',[
+            'meg'=> $meg,
+        ]);
+    }
+
+    public function deleteStudent($id){
+        
+        Meg::where('student',$id)->delete();
         $deleteStudent=Student::where('id',$id)->delete();
+
+        return back()->with('success','Eleve supprimer !');
+
     }
 }
 

@@ -10,5 +10,8 @@ class Student extends Model
     use HasFactory;
     protected $table = 'student';
     protected $fillable = ['lastname', 'firstname', 'classe', 'megnumber'];
-
+    
+    public function meg(){
+        $this->hasMany(Meg::class);
+    }
 }

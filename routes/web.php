@@ -21,7 +21,7 @@ use App\Http\Controllers\UtilisateursController;
 |
 */
 
-Route::view('/', 'index');
+Route::view('/', 'index')->name('login');
 
 Route::get('/inscription', [InscriptionController::class, 'formulaire']);
 Route::post('/inscription', [InscriptionController::class, 'traitement']);
@@ -30,16 +30,16 @@ Route::post('/inscription', [InscriptionController::class, 'traitement']);
 Route::get('/connexion', [ConnexionController::class,'formulaire']);
 Route::post('/connexion', [ConnexionController::class,'traitement']);
 
-Route::get('/admin', [CompteController::class,'ifNotConnected']);
-Route::get('/add_student', [CompteController::class, 'ifNotConnected']);
-Route::get('/meg_create', [CompteController::class, 'ifNotConnected']);
+Route::get('/admin',[StudentController::class,'liste'])->middleware('auth')->name("pannel");
+Route::get('/admin/data',[StudentController::class,'dataListe'])->middleware('auth');
 
-Route::get('/admin',[StudentController::class,'liste']);
-Route::get('/add_student', [StudentController::class, 'formulaire']);
-Route::post('/add_student', [StudentController::class, 'traitement']);
+Route::get('/add_student', [StudentController::class, 'formulaire'])->middleware('auth')->name('student');
+Route::post('/add_student', [StudentController::class, 'traitement'])->middleware('auth');
 
+Route::get('/meg_create', [MegController::class, 'formulaire'])->middleware('auth')->name('meg_create');
+Route::post('/meg_create', [MegController::class, 'traitement'])->middleware('auth');
 
-Route::get('/meg_create', [MegController::class, 'formulaire']);
-Route::post('/meg_create', [MegController::class, 'traitement']);
+Route::get('/delete_student/{id}', [StudentController::class,'deleteStudent'])->middleware('auth')->name('student_delete');
 
-Route::get('/deconnexion',[CompteController::class, 'deconnexion']);
+Route::get('/deconnexion',[ConnexionController::class, 'deconnexion'])->middleware('auth');
+

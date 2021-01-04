@@ -33,4 +33,9 @@ class ConnexionController extends Controller
         ]);
     }
 
+    public function deconnexion(){
+        auth()->logout();
+        return redirect('/');
+    }
+
 }

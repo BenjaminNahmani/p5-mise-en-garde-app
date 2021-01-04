@@ -7,7 +7,7 @@
     </figure>
   </div>
 
-    <form class="section" action="/inscription" method="POST">
+    <form class="section" action="/inscription" method="POST" id="form-js">
         {{ csrf_field() }}
      
         <div class="mb-3">
