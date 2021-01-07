@@ -51,11 +51,29 @@
 
         <section class="flash">
           @if ($message = Session::get('success'))
-        <div class="alert alert-success alert-block">
-            <strong>{{ $message }}</strong>
-        </div>
+              <div class="alert alert-success alert-block">
+                <button type="button" class="close" data-dismiss="alert">×</button> 
+                  <strong>{{ $message }}</strong>
+              </div>
         @endif
         </section>
+
+        @if ($message = Session::get('error'))
+            <div class="alert alert-danger alert-block">
+                <button type="button" class="close" data-dismiss="alert">×</button>    
+                <strong>{{ $message }}</strong>
+            </div>
+        @endif
+
+        @if ($errors->any())
+          <div class="alert alert-danger">
+              <ul>
+                  @foreach ($errors->all() as $error)
+                      <li>{{ $error }}</li>
+                  @endforeach
+              </ul>
+          </div>
+        @endif
 
         <div class="admin_content">
 
@@ -67,11 +85,10 @@
     </body>
 
             <!-- Scripts -->
+           
             <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
             <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
             <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
             <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
-            <!--<script src="{{URL::asset('/js/app.js   ')}}"></script>-->
-            <script src="{{URL::asset('/js/Modal.js   ')}}"></script>
             
 </html> 

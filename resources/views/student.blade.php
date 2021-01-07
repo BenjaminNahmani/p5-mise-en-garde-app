@@ -16,7 +16,7 @@
         </li>
    
           <!-- Modal -->
-          <div class="modal fade" id="modalMeg{{$student->id}}" role="dialog">
+          <div class="modal fade modalMeg" id="modalMeg{{$student->id}}" role="dialog">
             <div class="modal-dialog">
             
               <!-- Modal content-->
@@ -29,18 +29,18 @@
                     <h4 class="modal-title">Incident pour {{$student->firstname}} {{$student->lastname}}</h4>
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
                   </div>
-                  <div class="modal-body">
-                        
-                      <input type="hidden" name="student" value="{{$student->id}}">
 
-                        <div class="row">
-                          <div class="form-group meg_create_input">
-                              <label for="exampleFormControlTextarea1">Incident avec l'élève</label>
-                              <textarea class="form-control meg_textarea" id="incident{{$student->id}}" rows="3" cols="6" name="incident"></textarea>
-                            </div>
-                      </div>
-                      
-                    
+                  <div class="modal-body">
+                    <input type="hidden" name="student" class="studentValue" value="{{$student->id}}">
+
+                    <p id="error-modal" class="text-danger"></p>
+
+                    <div class="form-group meg_create_input">
+                        <label for="exampleFormControlTextarea1">Incident avec l'élève</label>
+                        <textarea class="form-control meg_textarea" id="incident{{$student->id}}" rows="3" cols="6" name="incident"></textarea>
+                    </div>
+                    <div class="backend-error"></div>
+
                   </div>
 
                   <div class="modal-footer">

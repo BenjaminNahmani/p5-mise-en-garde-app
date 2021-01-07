@@ -14,16 +14,11 @@
         </tr>
       </thead>
 
-
-
       <tbody id="students" >
 
-
-
-
-
-    </tbody>
-  </table>
+      </tbody>
+    </table>
+    
     <div id="loading">
       <figure>
         <img src="{{URL::asset('/img/loading.gif') }}" alt="Chargement...">

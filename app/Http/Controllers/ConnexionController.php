@@ -31,6 +31,13 @@ class ConnexionController extends Controller
         return back()->withInput()->withErrors([
             'email'=>'Vos identifiants sont incorrect.',
         ]);
+
+        if (!$resultat){
+            return redirect('/');
+
+        };
+
+
     }
 
     public function deconnexion(){

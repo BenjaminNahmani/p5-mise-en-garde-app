@@ -24,9 +24,16 @@
           </div>
       
           <div class="mb-3">
-            <label for="exampleInputPassword1" class="form-label">Classe</label>
-            <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Classe" name="classe" required>
-            
+            <label for="">Classe</label>
+            <select class="custom-select mr-sm-2" id="inlineFormCustomSelect" name="classe">
+                <option selected>Choisir</option>
+                <option value="CP">CP</option>
+                <option value="CE1">CE1</option>
+                <option value="CE2">CE2</option>
+                <option value="CM1">CM1</option>
+                <option value="CM2">CM2</option>
+             </select>
+
             @if ($errors->has('classe'))
               <p class="warning">{{ $errors->first('classe') }}</p>
             @endif

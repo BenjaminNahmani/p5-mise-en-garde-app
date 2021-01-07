@@ -15,8 +15,10 @@ class MegController extends Controller
 
     public function traitement(){
         request()->validate([
-            'incident'=>['required'],
+            'incident'=>['required','min:25'],
             'student'=>['required'],
+            ],[
+                'incident.min' => 'Vous devez saisir au moin 25 caractères.',
             ]);
             
         $resultat = Meg::create([
@@ -24,17 +26,20 @@ class MegController extends Controller
             'student'=>request('student'),
         ]);
 
+        
+
         $student = Student::find(request('student'));
 
         $student->megnumber=$student->megnumber+1;
         $student->save();
         
         if ($resultat) {
+            return response()->json('Tout est ok');
             return redirect('/admin');
         };
 
         return back()->withInput()->withErrors([
-            'email'=>'Vos identifiants sont incorrect.',
+            'incident'=>'Vous devez saisir au moin 25 caractères.',
         ]);
     }
 

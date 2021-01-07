@@ -3,7 +3,6 @@
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\MegController;
-use App\Http\Controllers\CompteController;
 use App\Http\Controllers\StudentController;
 use App\Http\Controllers\ConnexionController;
 use App\Http\Controllers\InscriptionController;
