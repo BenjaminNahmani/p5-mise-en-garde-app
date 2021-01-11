@@ -1,9 +1,9 @@
 @extends('layout_admin')
 @section('admin_content')
 
-  <section class="student_table">
+  <section class="student_table table-responsive-sm">
     <table class="table table-striped">
-      <thead>
+      <thead class="thead-dark">
         <tr>
           <th scope="col">#</th>
           <th scope="col">Nom</th>

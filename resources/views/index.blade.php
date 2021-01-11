@@ -16,7 +16,7 @@
       <div class="mb-3">
         <label for="exampleInputEmail1" class="form-label">Email</label>
         <input type="email" class="form-control" id="exampleInputEmail1" name="email" placeholder={{old('email')}} aria-describedby="emailHelp">
-        <div id="emailHelp" class="form-text">Nous ne comuniquerons jamais votre mail.</div>
+        <div id="emailHelp" class="form-text">Nous ne communiquerons jamais votre mail.</div>
   
           @if ($errors->has('email'))
               <p class="help is-danger">{{ $errors->first('email') }}</p>

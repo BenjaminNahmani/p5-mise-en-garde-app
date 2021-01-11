@@ -72,7 +72,7 @@ class StudentController extends Controller
         Meg::where('student',$id)->delete();
         $deleteStudent=Student::where('id',$id)->delete();
 
-        return back()->with('success','Eleve supprimer !');
+        return back()->with('success','Elève supprimé !');
 
     }
 }

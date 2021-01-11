@@ -29,7 +29,7 @@ class ConnexionController extends Controller
         };
 
         return back()->withInput()->withErrors([
-            'email'=>'Vos identifiants sont incorrect.',
+            'email'=>'Vos identifiants sont incorrects.',
         ]);
 
         if (!$resultat){

@@ -35,9 +35,9 @@ class InscriptionController extends Controller
             return redirect('/');
         };
         return back()->withInput()->withErrors([
-            'email'=>'Vos identifiants sont incorrect.',
-            'password'=>'Votre mot de passe n\'est pas accépté.',
-            'password_confirmation'=>'Vos mot de passe doivent être identique.',
+            'email'=>'Vos identifiants sont incorrects.',
+            'password'=>'Votre mot de passe n\'est pas accepté.',
+            'password_confirmation'=>'Vos mot de passe doivent être identiques.',
         ]);
 
     }

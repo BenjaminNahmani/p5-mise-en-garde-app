@@ -18,7 +18,7 @@ class MegController extends Controller
             'incident'=>['required','min:25'],
             'student'=>['required'],
             ],[
-                'incident.min' => 'Vous devez saisir au moin 25 caractères.',
+                'incident.min' => 'Vous devez saisir au moins 25 caractères.',
             ]);
             
         $resultat = Meg::create([
@@ -34,12 +34,12 @@ class MegController extends Controller
         $student->save();
         
         if ($resultat) {
-            return response()->json('Tout est ok');
+            return response()->json('Mise en garde ajoutée avec succès !');
             return redirect('/admin');
         };
 
         return back()->withInput()->withErrors([
-            'incident'=>'Vous devez saisir au moin 25 caractères.',
+            'incident'=>'Vous devez saisir au moins 25 caractères.',
         ]);
     }
 
