@@ -8,9 +8,9 @@
             $('.modalMeg form').submit((e) => {
                 e.preventDefault();
 
-                var form = $(e.target);
+                const form = $(e.target);
                 form.find("#error-modal").text("")
-                var url = form.attr('action');
+                const url = form.attr('action');
                 
                 $.ajax({
                        type: "POST",
@@ -24,7 +24,7 @@
                             getData()
                        },
                        error: function(err){
-                           var errorJSON = JSON.parse(err.responseText);
+                           const errorJSON = JSON.parse(err.responseText);
                            form.find("#error-modal").text(errorJSON.errors.incident[0])
 
                        } 

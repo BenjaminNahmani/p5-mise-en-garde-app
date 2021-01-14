@@ -20,7 +20,7 @@ class InscriptionController extends Controller
             'password.min' => 'Pour des raisons de sécurité, votre mot de passe doit contenir :min caractères.'
         ]);
 
-        $utilisateur = Utilisateurs::create([
+        Utilisateurs::create([
             'email' => request('email'),
             'password' => bcrypt(request('password')),
         ]);
