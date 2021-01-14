@@ -136,7 +136,7 @@ Dans le fichier .env, remplissez les options DB_HOST, DB_PORT, DB_DATABASE, DB_U
 
 
 
-_10- Ajouter les tables et contenus de votre base de données avec les migrations ou en sql_
+##titre 10- Ajouter les tables et contenus de votre base de données avec les migrations ou en sql
 
 
 
