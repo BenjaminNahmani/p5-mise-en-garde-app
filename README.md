@@ -4,6 +4,7 @@
 
 Ceci est un projet étudiant réaliser par mes soins pour la plateforme de formation en ligne Openclassroom, avec le Framework Laravel pour le côté Backend. Pour le côté Frontend, j'ai utilisé AJAX et du CSS simple, ainsi que Bootstrap.
 Etant professeur en école primaire, j'ai voulu recréer le système de mise en garde (MEG) de façon informatisé. Ce système permettra au surveillant d'envoyer une mise en garde conçernant un élève, sans avoir besoin d'utiliser le format papier classique, qui est encombrant et qui prend beaucoup plus de temps à remplir.
+Le projet est noté "B" sur Codacy.
 
 ## Les fonctionnalitées du projet
 
